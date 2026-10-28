@@ -1,0 +1,27 @@
+__pycache__
+.ipynb_checkpoints
+nohup.out
+LoI_env
+_Bin
+
+# reference repos (kept locally, not part of this project)
+Meme-Sanity
+multi-modal-scale
+
+# API keys
+Config/*.txt
+
+# data (hosted on HF)
+Data/*/ori
+Data/*/ex
+Data/*.log
+
+# pipeline intermediates: keep full runs, ignore test-mode samples
+Augmentation\ Pipeline/Outputs/*/Sample
+Augmentation\ Pipeline/Outputs/*/*/*/cache
+Augmentation\ Pipeline/Outputs/*/*/*/logs
+
+# experiments
+Experiments/Chkpts
+Experiments/Logs
+# Experiments/Outputs
