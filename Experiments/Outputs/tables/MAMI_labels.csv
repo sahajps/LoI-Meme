@@ -1,0 +1,19 @@
+Category,Model,Size,Prompt,Original (Binary) Accuracy,Original (Binary) F1-score,Augmented (Scaled) Accuracy,Augmented (Scaled) F1-score
+Unimodal (text) (fine-tuning),ALBERT,12M,Simple,61.31 ± 1.54,60.82 ± 1.55,55.84 ± 1.67,47.02 ± 2.01
+Unimodal (text) (fine-tuning),ALBERT,12M,Category,64.50 ± 1.43,63.91 ± 1.47,56.60 ± 1.66,48.51 ± 1.99
+Unimodal (text) (fine-tuning),BERT,112M,Simple,65.49 ± 1.46,65.10 ± 1.48,54.43 ± 1.64,44.08 ± 1.95
+Unimodal (text) (fine-tuning),BERT,112M,Category,63.99 ± 1.48,63.31 ± 1.51,49.93 ± 1.62,33.27 ± 1.80
+Unimodal (text) (fine-tuning),RoBERTa,125M,Simple,62.65 ± 1.52,61.71 ± 1.58,58.17 ± 1.65,52.17 ± 1.94
+Unimodal (text) (fine-tuning),RoBERTa,125M,Category,65.61 ± 1.52,65.02 ± 1.56,49.93 ± 1.62,33.27 ± 1.80
+Multimodal (fine-tuning),SmolVLM,2B,Simple,68.50 ± 1.26,66.92 ± 1.35,52.32 ± 1.67,39.53 ± 1.98
+Multimodal (fine-tuning),SmolVLM,2B,Category,71.62 ± 1.21,70.45 ± 1.32,53.00 ± 1.73,40.96 ± 2.09
+Multimodal (fine-tuning),Qwen2.5-VL,3B,Simple,74.94 ± 1.35,73.98 ± 1.44,58.87 ± 1.65,51.19 ± 2.03
+Multimodal (fine-tuning),Qwen2.5-VL,3B,Category,73.83 ± 1.40,72.64 ± 1.50,57.54 ± 1.70,49.19 ± 2.10
+Multimodal (fine-tuning),Qwen2-VL,7B,Simple,79.50 ± 1.33,79.03 ± 1.38,58.01 ± 1.55,49.29 ± 1.91
+Multimodal (fine-tuning),Qwen2-VL,7B,Category,80.34 ± 1.20,79.93 ± 1.25,57.49 ± 1.56,48.59 ± 1.88
+Multimodal (prompting),SmolVLM,2B,Simple,50.09 ± 1.60,34.09 ± 1.80,50.29 ± 1.62,34.06 ± 1.83
+Multimodal (prompting),SmolVLM,2B,Category,49.84 ± 1.62,33.23 ± 1.80,50.88 ± 1.63,35.66 ± 1.86
+Multimodal (prompting),Qwen2.5-VL,3B,Simple,54.27 ± 1.55,42.70 ± 1.85,1.70 ± 0.33,3.14 ± 0.60
+Multimodal (prompting),Qwen2.5-VL,3B,Category,51.30 ± 1.60,36.51 ± 1.84,1.72 ± 0.33,3.34 ± 0.64
+Multimodal (prompting),Qwen2-VL,7B,Simple,66.29 ± 1.57,63.90 ± 1.73,64.02 ± 1.53,60.18 ± 1.76
+Multimodal (prompting),Qwen2-VL,7B,Category,62.10 ± 1.48,57.51 ± 1.69,60.09 ± 1.61,53.76 ± 1.89

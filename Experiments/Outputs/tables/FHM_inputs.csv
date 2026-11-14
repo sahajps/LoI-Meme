@@ -1,0 +1,11 @@
+Category,Model,Size,Original Accuracy,Original F1-score,Augmented (Extended) Accuracy,Augmented (Extended) F1-score
+Unimodal (text) (fine-tuning),ALBERT,12M,61.44 ± 1.94,60.14 ± 1.98,61.57 ± 1.98,59.34 ± 2.19
+Unimodal (text) (fine-tuning),BERT,112M,62.19 ± 1.78,58.38 ± 2.13,62.30 ± 1.68,58.91 ± 1.92
+Unimodal (text) (fine-tuning),RoBERTa,125M,62.11 ± 1.87,59.92 ± 1.99,62.12 ± 1.86,58.74 ± 2.12
+Unimodal (vision) (fine-tuning),ViT,86M,58.66 ± 1.84,52.03 ± 2.19,59.18 ± 2.07,54.52 ± 2.32
+Unimodal (vision) (fine-tuning),BEiT,86M,58.86 ± 2.09,57.72 ± 2.15,59.06 ± 2.11,57.69 ± 2.23
+Unimodal (vision) (fine-tuning),DeiT,86M,57.08 ± 1.89,54.58 ± 2.08,57.39 ± 2.12,54.70 ± 2.29
+Multimodal (fine-tuning),CLIP,150M,64.38 ± 1.91,60.03 ± 2.25,66.63 ± 1.73,64.64 ± 1.91
+Multimodal (fine-tuning),SmolVLM,2B,69.79 ± 1.86,68.29 ± 2.02,68.71 ± 1.69,66.26 ± 1.89
+Multimodal (fine-tuning),Qwen2.5-VL,3B,75.27 ± 1.57,74.71 ± 1.63,74.67 ± 1.67,73.59 ± 1.83
+Multimodal (fine-tuning),Qwen2-VL,7B,80.54 ± 1.56,80.29 ± 1.61,81.65 ± 1.62,81.47 ± 1.67

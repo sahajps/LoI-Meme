@@ -1,0 +1,4 @@
+Category,Model,Size,Accuracy,F1-score
+Multimodal (zero-shot ICL),SmolVLM,2B,58.68 ± 1.84,43.59 ± 2.23
+Multimodal (zero-shot ICL),Qwen2.5-VL,3B,63.55 ± 1.76,63.82 ± 1.74
+Multimodal (zero-shot ICL),Qwen2-VL,7B,69.82 ± 1.77,69.13 ± 1.85
