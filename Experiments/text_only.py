@@ -27,7 +27,7 @@ print(f"train: {len(train_df)}, val: {len(val_df)}, test: {len(test_df)}")
 # orig/inputs: raw caption only; Labels settings: Simple/Category prompt + caption as a sentence pair
 prompt = PROMPTS.get(setting)
 num_classes = num_classes_for(setting)
-max_len = 64 if prompt is None else 512
+max_len = 128 if prompt is None else 512
 
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 if prompt is not None:
@@ -37,7 +37,7 @@ if prompt is not None:
 
 # --- Dataset ---
 class TextDataset(Dataset):
-    def __init__(self, texts, labels, tokenizer, max_len=64):
+    def __init__(self, texts, labels, tokenizer, max_len=128):
         if prompt is None:
             self.encodings = tokenizer(list(texts), truncation=True, padding="max_length", max_length=max_len, return_tensors="pt")
         else:
