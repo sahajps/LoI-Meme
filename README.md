@@ -62,5 +62,17 @@ Each run saves its test predictions to `Outputs/<DATASET>/<model>_<setting>.csv`
 
 ### 🔍 Data Analysis
 - `label_dist_analysis.ipynb`: label counts per split and setting, teacher agreement, meme typology.
-- `fhm_overlap_analysis.ipynb`: memes shared between the original FHM splits.
-- `mami_overlap_analysis.ipynb`: file names and memes shared between the MAMI splits.
+- `Experiments/analysis.ipynb`: evaluation metrics and result tables from the test predictions in `Experiments/Outputs/`.
+
+## 📚 Cite Us
+
+If you find this work helpful and use our dataset or methodology, please cite:
+
+```bibtex
+@article{singh2025labels,
+  title={Labels or Input? Rethinking Augmentation in Multimodal Hate Detection},
+  author={Singh, Sahajpreet and Jaidka, Kokil and Mukerjee, Subhayan},
+  journal={arXiv preprint arXiv:2508.11808},
+  year={2025}
+}
+```

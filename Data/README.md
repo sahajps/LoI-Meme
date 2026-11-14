@@ -25,8 +25,8 @@ Data/<DATASET>/                    # DATASET = FHM | MAMI
 `ex/` is filled by `Augmentation Pipeline/run_inputs.sh <DATASET> full` and `run_labels.sh <DATASET> full`.
 
 **Split notes:**
-- FHM: `train` = train (8,500); `val` = dev_seen ∪ dev_unseen (640; the two share 400 memes); `test` = test_seen + test_unseen (3,000). See `fhm_overlap_analysis.ipynb` for the overlaps between the original splits.
-- MAMI: `train` (9,000) and `val` (1,000) are the dataset's `train.tsv` and `validation.tsv`, which together are the official 10,000 training memes; `test` = the official test set (1,000). `label` is `misogynous`; the columns `shaming`, `stereotype`, `objectification` and `violence` are kept. All images are in one `img/` folder with their original names, except the 5 names that exist in both the training and test folders, which get a split suffix (e.g., `15001_val.jpg`, `15001_t.jpg`). See `mami_overlap_analysis.ipynb`.
+- FHM: `train` = train (8,500); `val` = dev_seen ∪ dev_unseen (640; the two share 400 memes); `test` = test_seen + test_unseen (3,000).
+- MAMI: `train` (9,000) and `val` (1,000) are the dataset's `train.tsv` and `validation.tsv`, which together are the official 10,000 training memes; `test` = the official test set (1,000). `label` is `misogynous`; the columns `shaming`, `stereotype`, `objectification` and `violence` are kept. All images are in one `img/` folder with their original names, except the 5 names that exist in both the training and test folders, which get a split suffix (e.g., `15001_val.jpg`, `15001_t.jpg`).
 - `ex_*_scale.jsonl` keep every meme with both teacher scores (0-9). The experiments use only memes whose score agrees with the binary label (0-4 for label 0, 5-9 for label 1).
 
-**Hugging Face release:** the `ex/` folders of both datasets hold everything we add, so they can go into one HF repo (`FHM/ex/`, `MAMI/ex/`).
+**Hugging Face release:** the `ex/` folders of both datasets hold everything we add. `python3 upload_data.py <HF repo link>` uploads them to one HF dataset repo (`FHM/ex/`, `MAMI/ex/`), with `README_HF.md` as the dataset card (`README.md`). It needs an HF token with write access in `Config/hf_token.txt`.

@@ -53,7 +53,7 @@ def download_fhm():
         return pd.read_json(f"{raw_dir}/{f}.jsonl", lines=True, dtype={"id": str})[["id", "img", "text", "label"]]
 
     train = read("train")
-    # dev_seen and dev_unseen share 400 memes (see fhm_overlap_analysis.ipynb): val = dev_seen U dev_unseen
+    # dev_seen and dev_unseen share 400 memes: val = dev_seen U dev_unseen
     val = pd.concat([read("dev_seen"), read("dev_unseen")], ignore_index=True).drop_duplicates("id")
     test = pd.concat([read("test_seen"), read("test_unseen")], ignore_index=True)
     assert not set(train.id) & set(val.id) and not set(test.id) & (set(train.id) | set(val.id)), "official splits should not overlap"
@@ -75,7 +75,7 @@ def download_mami():
             shutil.copy(src + f, raw_dir)
 
     splits = {s: pd.read_csv(f"{raw_dir}/{f}.tsv", sep="\t") for s, f in [("train", "train"), ("val", "validation"), ("test", "test")]}
-    # the training and test image folders share a few file names (see mami_overlap_analysis.ipynb):
+    # the training and test image folders share a few file names:
     # those get a split suffix (e.g., 15001_val.jpg, 15001_t.jpg); all other images keep their original name
     shared = (set(splits["train"].file_name) | set(splits["val"].file_name)) & set(splits["test"].file_name)
     suffix = {"train": "tr", "val": "val", "test": "t"}
